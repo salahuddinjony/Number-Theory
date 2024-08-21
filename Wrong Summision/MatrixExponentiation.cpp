@@ -1,5 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
+#define mod 1000000007
 
 #define optimize() ios_base::sync_with_stdio(0);cin.tie(0);cout.tie(0);
 
@@ -11,7 +12,7 @@ void mul(int res[][N], int A[][N], int n) {
     for (int i = 0; i < n; i++) {
         for (int j = 0; j < n; j++) {
             for (int k = 0; k < n; k++) {
-                temp[i][j] += res[i][k] * A[k][j];
+                temp[i][j] += (res[i][k] * A[k][j])%mod;
             }
         }
     }
@@ -66,6 +67,7 @@ int main() {
                 cin >> A[i][j];
             }
         }
+        cout << endl;
 
         matrix(A, p, n);
 

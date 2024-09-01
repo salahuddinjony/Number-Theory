@@ -6,6 +6,7 @@ using namespace std;
 const int N = 2000000;
 bool prime[900000001];
 vector<int>ans;
+
 void sieve() {
     for (int i = 2; i * i <= N; i++) {
         if (prime[i]==false) {
@@ -23,7 +24,8 @@ void SegmentSieve(int l,int r) {
     if(l==1) l++;
     int len=r-l+1;
     int arr[len+1];
-    for (int i = 0; i <len; i++) arr[i]=0;
+    memset(arr, 0, len * sizeof(int));
+    // for (int i = 0; i <len; i++) arr[i]=0;
     
     for(int p: ans){
         if(p*p<=r){
@@ -41,9 +43,9 @@ void SegmentSieve(int l,int r) {
     }
     for (int i = 0; i <len; i++)
     {
-       if(arr[i]==0) cout<<l+i<<" ";
+       if(arr[i]==0) cout<<l+i<<endl;
     }
-    cout<<endl;
+    
     
 
     

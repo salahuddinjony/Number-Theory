@@ -20,7 +20,7 @@ int gcdRes(multiset<ll>& A, ll x) {
     }
     int result = *A.begin();
     A.erase(A.begin());
-    return result;
+    return result; 
 }
 
 int main() {

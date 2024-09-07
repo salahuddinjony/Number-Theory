@@ -36,6 +36,8 @@ int main() {
 */
 //Eular Totient Functions is: n*(1-1/p1)*(1-1/p2)*(1-1/pk) where p is prime factor
 
+
+//Time Complexity: O(sqrt{n}) 
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -65,7 +67,7 @@ int main() {
     
     int n;
     cin >> n;
-    cout << "Total Coprime is: " << primeFactor(n) << endl;
+    cout <<primeFactor(n) << endl;
    
     return 0;
 }

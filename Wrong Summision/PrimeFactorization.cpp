@@ -5,7 +5,15 @@ using namespace std;
 
 const int N = 2000000;
 int a[N];
+/*
 
+A prime factor of a number is a factor that is a prime number.
+Prime factors are the building blocks of all integers, 
+as every positive integer greater than 1 can be uniquely 
+represented as a product of prime factors.
+This is known as the fundamental theorem of arithmetic.
+
+*/
 void primefact(int n) {
     
     int number=n;

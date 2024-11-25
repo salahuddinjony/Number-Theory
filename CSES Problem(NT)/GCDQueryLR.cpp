@@ -9,6 +9,8 @@ int a[N];
 int gcd(int a,int b) {
     if (b == 0) return a;
     return gcd(b, a % b);
+    //inbuilt gcd functions:
+    // __gcd(a,b);
 }
 
 int main() {
@@ -24,7 +26,7 @@ int main() {
         int pre[n+3];
          pre[0]=0;
         int post[n+3];
-         post[n+1]=0;
+        post[n+1]=0;
         for (int i =1; i <= n; i++) cin>>a[i];
         for (int i =1; i <=n; i++) pre[i]=gcd(pre[i-1],a[i]); //2 2 1
         for (int i =n; i >=1; i--) post[i]=gcd(post[i+1],a[i]);//1 3 9

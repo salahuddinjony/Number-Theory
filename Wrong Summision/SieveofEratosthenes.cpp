@@ -15,6 +15,7 @@ void sieve() {
             }
         }
     }
+    
     for (int i = 2; i <=N; i++) {
         if (prime[i]==false) ans.push_back(i);
     }

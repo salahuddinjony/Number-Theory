@@ -6,6 +6,7 @@ using namespace std;
 const int N = 2000000;
 int a[N];
 
+
 void printBinary(int num){
     int count=0;
     for (int i = 9; i >=0; --i)
@@ -17,6 +18,8 @@ void printBinary(int num){
     //cout<<count<<endl;
     
 }
+
+
 int main() {
     optimize();
     int a,pos;
@@ -29,7 +32,7 @@ int main() {
     else cout<<"UNSET"<<endl;
 
     //Set bits
-     cout<<"Set the bit"<<endl;
+    cout<<"Set the bit"<<endl;
     cout<<(a | (1<<pos))<<endl; 
     printBinary(a | (1<<pos));
 
@@ -52,6 +55,7 @@ int main() {
   
     cout<<"Total set bits : "<<cnt<<endl;
     printBinary(a);
+    
     //or count set bits
     cout<<"Builtin popcount: "<<__builtin_popcount(a)<<endl;
     cout<<"Builtin popcount: "<<__builtin_popcountll(1LL<<35)<<endl;
@@ -64,6 +68,7 @@ int main() {
 
     return 0;
 }
+
 
 /*
  Author : SALAH 

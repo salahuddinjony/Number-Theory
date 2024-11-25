@@ -5,13 +5,13 @@ using namespace std;
 
 const int N = 2000000;
 int a[N];
-
+//iterative method
 int binaryExp(int m,int n) {  //TC=log(n)
     int res=1;
     int base=m;
     while (n)
     {
-       if(n%2!=0){
+       if(n & 1){ //if even we write also (n%2==0)
         res*=base;
         n-=1;
        }

@@ -34,6 +34,9 @@ int main() {
 
 
 */
+
+
+
 //Eular Totient Functions is: n*(1-1/p1)*(1-1/p2)*(1-1/pk) where p is prime factor
 
 

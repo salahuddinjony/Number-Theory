@@ -3,7 +3,7 @@ using namespace std;
 #define endl '\n'
 #define optimize() ios_base::sync_with_stdio(0); cin.tie(0); cout.tie(0);
 
-vector<vector<int>> subsets(vector<int> &nums) {
+vector<vector<int>> subsets(vector<int> &nums) {  // using use of index of Nums
     int n = nums.size();
     int subset_cnt = (1 << n); // 2^n subsets
     vector<vector<int>> subsets;
@@ -16,8 +16,8 @@ vector<vector<int>> subsets(vector<int> &nums) {
             }
         }
         subsets.push_back(subset);
-    }
-    return subsets;
+    } 
+    return subsets; 
 }
 
 int main() {

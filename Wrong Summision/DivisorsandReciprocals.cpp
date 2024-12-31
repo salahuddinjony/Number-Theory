@@ -21,7 +21,7 @@ int sumOfDivisors(int N) {
 int Reciprocals(int x, int a, int b) {
     int N = (x * b) / a;
     if ((x * b) % a != 0) return -1;  // Ensure N is an integer
-    int sum = sumOfDivisors(N);
+    int sum = sumOfDivisors(N); 
     if (sum == x) return N;
     return -1;
 }

@@ -5,6 +5,7 @@ using namespace std;
 
 const int N = 2000000;
 int a[N];
+
 void PrintBinary(int n){
     for (int i =10; i >=0; i--)
     {
@@ -19,6 +20,7 @@ int main() {
     int n;
     cin>>n;
     vector<int>masks(n,0);
+    
     for (int i = 0; i <n; i++)
     {
         int num_days;

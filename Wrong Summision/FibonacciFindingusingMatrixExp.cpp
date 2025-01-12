@@ -17,6 +17,10 @@ using namespace __gnu_pbds;
 typedef long long int ll;
 typedef unsigned long long int  llu;
 #define N 5
+
+
+//Problem Link: https://www.hackerrank.com/challenges/fibonacci-finding-easy/problem
+
 ll I[N][N],T[N][N];
 void mul(ll A[][N],ll B[][N],ll dim)
 {
@@ -35,16 +39,22 @@ void mul(ll A[][N],ll B[][N],ll dim)
     }
     for(ll i=0;i<2;i++)
     {
-        for(ll j=0;j<2;j++)A[i][j]=res[i][j];
+        for(ll j=0;j<2;j++) A[i][j]=res[i][j];
     }
 }
 void solve(ll a,ll b,ll n)
 {
-    I[0][0]=I[1][1]=1;
-    I[0][1]=I[1][0]=0;
+    // Identity Matrix (2x2)
+    int I[2][2] = {
+        {1, 0},
+        {0, 1}
+    };
 
-    T[0][0]=0;
-    T[0][1]=T[1][0]=T[1][1]=1;
+    // Transformation Matrix (2x2)
+    int T[2][2] = {
+        {0, 1},
+        {1, 1}
+    };
     n--;
     while(n)
     {

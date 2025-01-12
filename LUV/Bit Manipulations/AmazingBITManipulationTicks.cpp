@@ -12,7 +12,7 @@ int a[N];
 // Print a number with binary
 void printBinary(int n)
 {
-    for (int i = 10; i >= 0; i--)
+    for (int i = 5; i >= 0; i--)
     {
         cout << ((n >> i) & 1);
     }
@@ -23,7 +23,7 @@ int main()
 {
     optimize();
 
-    int n=12;
+    int n=3;
    
 
     // Print a number with binary

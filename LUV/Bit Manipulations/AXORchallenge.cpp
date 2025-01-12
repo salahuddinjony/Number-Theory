@@ -6,7 +6,27 @@ using namespace std;
 // Constant for maximum array size (not used in this code)
 const int mx=2e5+123;
 long long a[mx];
+/*
+You are given an integer 
+ such that the XOR of two integers 
+ is 
+. In short 
+ (⊕ denotes the bitwise the XOR operation).
 
+Out of all possible pairs of 
+ and 
+, you must find two integers such that their product is maximum. 
+
+Let us define 
+ as the length of 
+ in its binary representation. Then, 
+ and 
+.
+Explanation
+The binary representation of 13 is "1101".
+
+We can use A=10 ("1010" in binary) and B=7 ("0111" in binary). This gives us the product 70. No other valid pair (A,B) can give us a larger product.
+*/
 int main(){
     optimize();
 

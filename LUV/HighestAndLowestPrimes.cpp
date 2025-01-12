@@ -10,25 +10,25 @@ vector<int> ans;
 vector<int> lp(N,0),hp(N,0);
 
 void sievePrime() {
-    for (int i = 2; i < N; i++) {
+    for (int i = 2; i*i < N; i++) {
         if (prime[i]) {
             lp[i]=hp[i]=i;
-            for (int j = 2 * i; j < N; j += i) {
+            for (int j = i * i; j < N; j += i) {
                 prime[j] = false;
                 hp[j]=i;
                 if(lp[j]==0) lp[j]=i;
             }
         }
     }
-    //find prime fractor O(N)
-    /* for (int i = 2; i < N; i++) {
+   /*  find lowet and highest prime fractor of N, -----O(N)-----
+    for (int i = 2; i < N; i++) {
        cout<<"For number:"<<i<<" {lp="<<lp[i]<<", hp="<<hp[i]<<"}"<<endl;
     } */
 
 
     int num;
     cin>>num;
-    unordered_map<int,int>Prime_fractors;
+    unordered_map<int,int>Prime_fractors; //store prime factors count
     while (num>1)
     {
         int Prime_fractor=hp[num];

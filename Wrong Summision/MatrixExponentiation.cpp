@@ -40,7 +40,7 @@ void matrix(int A[][N], int p, int n) {
             p--;
         } else {
             mul(A, A, n);
-            p /= 2;
+            p /= 2; 
         }
     }
 

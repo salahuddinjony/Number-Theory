@@ -12,16 +12,17 @@ long long a[mx];
 int BinaryExp(int a, int b){
 
     if(b==0) return 1;
+     int res = BinaryExp(a, b / 2);
     if(b&1){ //check its odd or even
-        return (a*( BinaryExp(a,b/2) *1LL* BinaryExp(a,b/2)%M) %M);//for odd power
+        return (a*(res *1LL*res %M) %M);//for odd power
     }
     else{
-        return (BinaryExp(a,b/2) *1LL* BinaryExp(a,b/2) %M); //for even power
+        return (res *1LL* res %M); //for even power
     }
 }
 int main(){
     optimize();
-    cout<<BinaryExp(2,11)<<endl;
+    cout<<BinaryExp(2,3)<<endl;
     return 0;
 }
 
@@ -33,12 +34,12 @@ using namespace std;
 
 int BinaryExp(int a, int b) {
     if (b == 0) return 1;  // Base case: a^0 = 1
-
     int res = BinaryExp(a, b / 2);  // Recursive call
-    res *= res;  // Square the result
 
     if (b & 1) {  // If b is odd, multiply by a
-        res *= a;
+        res= a*res *res;
+    }else{
+    res = res*res;  // Square the result
     }
 
     return res;

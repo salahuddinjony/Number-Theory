@@ -10,7 +10,7 @@ const int M=1e6;
 /*
 This reduces the number of multiplications from  b  to  \log_2(b) ,making it much 
 faster for large exponents.
-*/
+*/ 
 
 //BinaryIterative method
 int BinaryExp(int a, int b){
@@ -18,11 +18,11 @@ int BinaryExp(int a, int b){
     while (b)
     {
         if(b&1){  //if(b&1): Checks if the current bit of b (in binary) is 1:If true multiply ans by a (because this bit contributes to the result).
-        ans=(ans*1LL*a)%M;
+        ans=(ans*1LL*a)%M; 
         }
         a=(a*1LL*a)%M;  // Square a for the next higher power.
         b>>=1;          //Right-shift b by 1 (equivalent to dividing b by 2)
-    }
+    } 
     return ans;
     
 }

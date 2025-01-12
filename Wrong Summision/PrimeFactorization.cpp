@@ -29,7 +29,6 @@ void primefact(int n) {
             cout << i << "^" << count << endl;
         }
     }
-
     if (n > 1) {
         cout << n << "^1" << endl; // Remaining prime factor greater than sqrt(n)
 }

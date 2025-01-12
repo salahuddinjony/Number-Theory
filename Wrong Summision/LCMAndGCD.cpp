@@ -6,15 +6,22 @@ using namespace std;
 const int N = 2000000;
 int a[N];
 
+
+
+int gcd(int a, int b) {
+    return (b == 0) ? a : gcd(b, a % b);
+}
+
 int lcm(int a,int b) {
     int c=a,d=b;
-    while (b)
+  /*   while (b)
     {
         int temp=b;
         b=a%b;
         a=temp;
-    }
-    return (c*d)/a;
+    } */
+ 
+    return (c*d)/ gcd( a, b);
 }
 
 int main() {
